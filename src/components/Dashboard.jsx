@@ -1,6 +1,8 @@
-import { Link,Outlet } from "react-router-dom";
+import { Link,Outlet, useNavigate } from "react-router-dom";
 
 const Dashboard = ()=>{
+
+    const navigate = useNavigate();
 
 
     return (
@@ -8,14 +10,13 @@ const Dashboard = ()=>{
         <p>Dashboard</p>
         <nav>
             <div>
-                <Link to="/">Home</Link>
+                <button onClick={()=>{navigate("/")}}>Home</button>
             </div>
             <div>
-                <Link to="/catalog">Catalog</Link>
-
+                <button onClick={()=>{navigate("/catalog")}}>Catalog</button>
             </div>
             <div>
-                <Link to="/checkout">Cart</Link>
+                <button onClick={()=>{navigate("/checkout")}}>Cart</button>
             </div>    
         </nav>
         <Outlet />
