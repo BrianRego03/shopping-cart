@@ -1,10 +1,10 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link,Outlet, useNavigate } from "react-router-dom";
 
 const Dashboard = ()=>{
 
     const navigate = useNavigate();
-    const productArray=[];
+    const [productArray,setProductArray]=useState([]);;
 
     const useFetchProducts =()=>{
         useEffect(()=>{
@@ -16,7 +16,9 @@ const Dashboard = ()=>{
 
                     }
                     let postData=await response.json();
-                    console.log(postData);
+                    setProductArray([...postData]);
+                    
+                    console.log(productArray);
                 }
                 catch(err){
                     console.log(err.message);
@@ -47,7 +49,7 @@ const Dashboard = ()=>{
                 <button onClick={()=>{navigate("/checkout")}}>Cart</button>
             </div>    
         </nav>
-        <Outlet />
+        <Outlet context={{productArray}}/>
 
 
         </>
