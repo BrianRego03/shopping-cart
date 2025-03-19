@@ -9,7 +9,9 @@ const Catalog = ()=>{
 
     return (
         <>
-            <ProductCard array={productArray}/>
+            {productArray.map((item,index)=>{
+                return <ProductCard key={index} product={item}/>
+            })}
             <p>Catalog Page</p>
         </>
     )

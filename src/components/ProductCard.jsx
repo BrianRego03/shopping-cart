@@ -1,7 +1,7 @@
 
 
-const ProductCard=({array})=>{
-    console.log(array);
+const ProductCard=({product})=>{
+    console.log(product);
 
 
 }
