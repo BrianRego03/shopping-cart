@@ -1,0 +1,39 @@
+.cardStyle img{
+    /* float: left; */
+    width:  170px;
+    height: 200px;
+    object-fit: contain; 
+}
+
+.cardStyle p{
+    max-width: 100px;
+    height: 70px;
+    text-overflow: ellipsis;
+    margin:0;
+    white-space: wrap;  
+    overflow: hidden;  
+    float: left;
+
+}
+
+.cardStyle {
+    border: 1px solid #333333;
+    width: 180px;
+    height: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin:10px;
+}
+
+.imageContainer{
+    width: 170px;
+    height: 200px;
+
+}
+
+.buttonDivision{
+    max-height: 20px;    
+}
