@@ -51,8 +51,13 @@ const Dashboard = ()=>{
     }
     useFetchProducts();
 
-    const addToCart=()=>{
-
+    const addToCart=(identity,productQuantity)=>{
+        const cartItem=cartArray.find(product=>product.id===identity);
+        if(cartItem){
+            const newCartArray=cartArray.map(items => 
+                items.id===cartItem.id?items.changeQuantity(productQuantity):items);
+            setCartArray(newCartArray);    
+        }
     }
 
 
