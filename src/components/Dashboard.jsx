@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link,Outlet, useNavigate } from "react-router-dom";
+import { v4 as uuidv4 } from 'uuid';
 
 const Dashboard = ()=>{
 
@@ -7,6 +8,7 @@ const Dashboard = ()=>{
     const [productArray,setProductArray]=useState([]);
     const [error,setError]=useState(null);
     const [loading,setLoading]=useState(true);
+    const [cartArray,setCartArray]=useState([]);
 
     const useFetchProducts =()=>{
         useEffect(()=>{
@@ -18,6 +20,7 @@ const Dashboard = ()=>{
 
                     }
                     let postData=await response.json();
+                    postData.map((item)=>{item.id=uuidv4()})
                     setProductArray([...postData]);
                     
                     console.log(productArray);
@@ -35,6 +38,10 @@ const Dashboard = ()=>{
 
     }
     useFetchProducts();
+
+    const addToCart=()=>{
+
+    }
 
 
     return (
