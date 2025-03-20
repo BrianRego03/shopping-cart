@@ -18,6 +18,7 @@ const Dashboard = ()=>{
         }
         changeQuantity(amount){
             this.quantity=amount;
+            return this;
             
         }
     }
@@ -52,11 +53,24 @@ const Dashboard = ()=>{
     useFetchProducts();
 
     const addToCart=(identity,productQuantity)=>{
+        console.log(identity);
+        console.log(productQuantity);
         const cartItem=cartArray.find(product=>product.id===identity);
         if(cartItem){
             const newCartArray=cartArray.map(items => 
                 items.id===cartItem.id?items.changeQuantity(productQuantity):items);
-            setCartArray(newCartArray);    
+            setCartArray(newCartArray);  
+            console.log(newCartArray); 
+            console.log(cartArray);
+        }
+        else{
+            const newCartItem=productArray.find((item)=>{return item.id===identity});
+            console.log(newCartItem);
+            newCartItem.changeQuantity(productQuantity);
+            console.log([...cartArray,newCartItem]);
+            setCartArray([...cartArray,newCartItem]);
+            console.log(cartArray);
+
         }
     }
 
@@ -75,7 +89,7 @@ const Dashboard = ()=>{
                 <button onClick={()=>{navigate("/checkout")}}>Cart</button>
             </div>    
         </nav>
-        <Outlet context={{productArray,error,loading}}/>
+        <Outlet context={{productArray,error,loading,addToCart}}/>
 
 
         </>

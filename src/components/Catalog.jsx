@@ -3,7 +3,7 @@ import ProductCard from "./Productcard";
 import "../styles/catalog.css"
 
 const Catalog = ()=>{
-    const {productArray,error,loading}=useOutletContext();
+    const {productArray,error,loading,addToCart}=useOutletContext();
 
     console.log(productArray);
 
@@ -28,7 +28,7 @@ const Catalog = ()=>{
         <>
             <div id="productCatalog">
                 {productArray.map((item,index)=>{
-                    return <ProductCard key={index} product={item}/>
+                    return <ProductCard key={index} product={item} cartUpdate={addToCart}/>
                 })}
             </div>
             
