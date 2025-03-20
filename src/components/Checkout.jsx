@@ -11,7 +11,9 @@ const Checkout = ()=>{
         <>
             <p>Checkout Page</p>
             {productArray.filter(item=>item.quantity>0)
-                        .map((item)=><CheckoutCard key={item.id} product={item}/>)}
+                        .map((item)=>
+                        <CheckoutCard key={item.id} product={item} updateCart={addToCart}/>)
+                        }
         </>
 
     )

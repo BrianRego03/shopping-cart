@@ -51,11 +51,10 @@ const Dashboard = ()=>{
     }
     useFetchProducts();
 
-    const addToCart=(identity,productQuantity)=>{
-   
+    const addToCart=(identity,productQuantity)=>{   
         const cartSelectionArray=productArray.map((item)=>{
             if(item.id===identity)
-                return {...item,quantity:productQuantity}
+                return item.changeQuantity(productQuantity);
             else return item;
         })
         console.log(cartSelectionArray);
