@@ -8,7 +8,11 @@ const ProductCard=({product})=>{
             <div className="cardStyle">
                 <div className='imageContainer'><img src={product.image}></img></div>
                 <p>{product.title}</p>
-                <p className='buttonDivision'>+/-</p>
+                <div className='buttonDivision'>
+                    <button>+</button>
+                    <span>{product.quantity}</span>
+                    <button>-</button>
+                </div>
             </div>
         </>
     )
