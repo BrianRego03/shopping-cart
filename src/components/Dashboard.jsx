@@ -10,6 +10,18 @@ const Dashboard = ()=>{
     const [loading,setLoading]=useState(true);
     const [cartArray,setCartArray]=useState([]);
 
+    class CartObject{
+        constructor(objectData){
+            Object.assign(this,objectData);
+            this.quantity=0;
+            this.id=uuidv4();
+        }
+        changeQuantity(amount){
+            this.quantity=amount;
+            
+        }
+    }
+
     const useFetchProducts =()=>{
         useEffect(()=>{
             const fetchData= async ()=>{
@@ -20,7 +32,7 @@ const Dashboard = ()=>{
 
                     }
                     let postData=await response.json();
-                    postData.map((item)=>{item.id=uuidv4()})
+                    postData=[...postData.map((item)=>{return new CartObject(item)})];
                     setProductArray([...postData]);
                     
                     console.log(productArray);
