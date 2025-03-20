@@ -3,9 +3,25 @@ import ProductCard from "./Productcard";
 import "../styles/catalog.css"
 
 const Catalog = ()=>{
-    const {productArray}=useOutletContext();
+    const {productArray,error,loading}=useOutletContext();
 
     console.log(productArray);
+
+    if(error){
+        return (
+            <>
+                <div>A network error is encountered</div>
+            </>
+        )
+    }
+
+    if(loading){
+        return(
+            <>
+                <div>Loading....</div>
+            </>
+        )
+    }
 
 
     return (

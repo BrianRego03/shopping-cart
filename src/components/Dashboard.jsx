@@ -4,7 +4,9 @@ import { Link,Outlet, useNavigate } from "react-router-dom";
 const Dashboard = ()=>{
 
     const navigate = useNavigate();
-    const [productArray,setProductArray]=useState([]);;
+    const [productArray,setProductArray]=useState([]);
+    const [error,setError]=useState(null);
+    const [loading,setLoading]=useState(true);
 
     const useFetchProducts =()=>{
         useEffect(()=>{
@@ -21,11 +23,11 @@ const Dashboard = ()=>{
                     console.log(productArray);
                 }
                 catch(err){
-                    console.log(err.message);
+                    setError(err);
 
                 }
                 finally{
-                    console.log("done");
+                    setLoading(false);
                 }
             }
             fetchData();
@@ -49,7 +51,7 @@ const Dashboard = ()=>{
                 <button onClick={()=>{navigate("/checkout")}}>Cart</button>
             </div>    
         </nav>
-        <Outlet context={{productArray}}/>
+        <Outlet context={{productArray,error,loading}}/>
 
 
         </>
