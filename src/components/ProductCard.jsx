@@ -7,9 +7,24 @@ const ProductCard=({product,cartUpdate})=>{
         if(cardQuantity===0){
             return;
         }
-        else{setCardQuantity(itemNumber=>itemNumber-1)}
+        else{
+            setCardQuantity(itemNumber=>itemNumber-1);
+            cartUpdate(product.id,product.quantity-1);
+
+        }
     }
-    
+
+    const initialCardQuantity=()=>{
+        setCardQuantity(1);
+        cartUpdate(product.id,1);
+
+    }
+    const increaseQuantity=()=>{
+        setCardQuantity(itemNumber=>itemNumber+1);
+        cartUpdate(product.id,product.quantity+1);
+
+
+    }
     
 
     return(
@@ -17,12 +32,17 @@ const ProductCard=({product,cartUpdate})=>{
             <div className="cardStyle">
                 <div className='imageContainer'><img src={product.image}></img></div>
                 <p>{product.title}</p>
-                <div className='buttonDivision'>
-                    <button onClick={()=>{setCardQuantity(itemNumber=>itemNumber+1)}}>+</button>
-                    <span>{cardQuantity}</span>
-                    <button onClick={decreaseCardQuantity}>-</button>
-                </div>
-                <div><button onClick={()=>{cartUpdate(product.id,cardQuantity)}}>Add to cart</button></div>
+                {
+                    cardQuantity>0?(<div className='buttonDivision'>
+                        <button onClick={decreaseCardQuantity}>-</button>
+                        <span>{cardQuantity}</span>
+                        <button onClick={increaseQuantity}>+</button>
+                    </div>):(<div>
+                    <button onClick={initialCardQuantity}>Add to cart</button>
+                    </div>)
+                }
+                
+               
             </div>
         </>
     )
