@@ -1,5 +1,5 @@
 import { useOutletContext } from "react-router-dom";
-import ProductCard from "./Productcard";
+import ProductCard from "./ProductCard";
 import "../styles/catalog.css"
 
 const Catalog = ()=>{

@@ -2,9 +2,9 @@ import { useState } from 'react'
 import  '../styles/productCard.css'
 
 const ProductCard=({product,cartUpdate})=>{
-    const [cardQuantity,setCardQuantity]=useState(1);
+    const [cardQuantity,setCardQuantity]=useState(product.quantity);
     const decreaseCardQuantity=()=>{
-        if(cardQuantity===1){
+        if(cardQuantity===0){
             return;
         }
         else{setCardQuantity(itemNumber=>itemNumber-1)}
