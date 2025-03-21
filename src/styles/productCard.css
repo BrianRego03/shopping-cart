@@ -35,5 +35,51 @@
 }
 
 .buttonDivision{
-    max-height: 20px;    
+    height: 26px;
+    border: none;  
+    width:50%;  
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    background-color: rgb(19, 148, 2);
+    color: white;
+}
+
+.quantityButton{
+
+    border: none;
+    height: 100%;
+    width: 30%;
+    padding: 0px;
+    border-radius: 20px;
+    background-color: rgb(19, 148, 2);
+    color: white;
+    font-size: 1rem;
+
+
+}
+
+.addCartButton:hover{
+    background-color:rgb(19, 148, 2);
+    color: white;
+
+}
+
+
+.addCartButton{
+    background-color: white;
+    border: 1px solid rgb(19, 148, 2);
+    height: 26px;
+    width: 100%;
+    font-size: 0.9rem;
+    border-radius: 20px;
+
+}
+
+.addCartContainer{
+    min-width: 50%;
+
+
 }

@@ -24,11 +24,11 @@ const ProductCard=({product,cartUpdate})=>{
                 <p>{product.title}</p>
                 {
                     product.quantity>0?(<div className='buttonDivision'>
-                        <button onClick={decreaseCardQuantity}>-</button>
+                        <button className="quantityButton" onClick={decreaseCardQuantity}>-</button>
                         <span>{product.quantity}</span>
-                        <button onClick={increaseQuantity}>+</button>
-                    </div>):(<div>
-                    <button onClick={initialCardQuantity}>Add to cart</button>
+                        <button className="quantityButton" onClick={increaseQuantity}>+</button>
+                    </div>):(<div className='addCartContainer'>
+                    <button className='addCartButton' onClick={initialCardQuantity}>Add to cart</button>
                     </div>)
                 }
                 
