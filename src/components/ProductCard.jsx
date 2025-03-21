@@ -19,7 +19,7 @@ const ProductCard=({product,cartUpdate})=>{
 
     return(
         <>
-            <div className="cardStyle">
+            <div className={"cardStyle"+ (product.quantity>0?" highlightCard" : "")}>
                 <div className='imageContainer'><img src={product.image}></img></div>
                 <p>{product.title}</p>
                 {

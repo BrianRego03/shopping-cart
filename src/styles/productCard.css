@@ -13,19 +13,27 @@
     white-space: wrap;  
     overflow: hidden;  
     float: left;
+    font-size: 1.2rem;
 
 }
 
 .cardStyle {
-    border: 1px solid #333333;
+    border: 2px solid #c5c5c5;
     width: 180px;
-    height: 300px;
+    height: 330px;
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     align-items: center;
     margin:10px;
+    border-radius: 20px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+.cardStyle:hover{
+    box-shadow: 0px 4px 10px rgb(19, 148, 2);
+    
+
 }
 
 .imageContainer{
@@ -34,11 +42,16 @@
 
 }
 
+.highlightCard{
+    border:2px solid rgb(19, 148, 2);
+}
+
 .buttonDivision{
-    height: 26px;
+    height: 30px;
     border: none;  
-    width:50%;  
-    font-size: 1rem;
+    width:70%;  
+    font-size: 1.2rem;
+    font-weight: bold;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -56,7 +69,8 @@
     border-radius: 20px;
     background-color: rgb(19, 148, 2);
     color: white;
-    font-size: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
 
 
 }
@@ -64,6 +78,7 @@
 .addCartButton:hover{
     background-color:rgb(19, 148, 2);
     color: white;
+    cursor: pointer;
 
 }
 
@@ -71,15 +86,15 @@
 .addCartButton{
     background-color: white;
     border: 1px solid rgb(19, 148, 2);
-    height: 26px;
+    height: 30px;
     width: 100%;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     border-radius: 20px;
 
 }
 
 .addCartContainer{
-    min-width: 50%;
+    min-width: 70%;
 
 
 }
