@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link,Outlet, useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from 'uuid';
+import "../styles/dashboard.css"
 
 const Dashboard = ()=>{
 
@@ -64,18 +65,22 @@ const Dashboard = ()=>{
 
     return (
         <>
-        <p>Dashboard</p>
-        <nav>
-            <div>
-                <button onClick={()=>{navigate("/")}}>Home</button>
-            </div>
-            <div>
-                <button onClick={()=>{navigate("/catalog")}}>Catalog</button>
-            </div>
-            <div>
-                <button onClick={()=>{navigate("/checkout")}}>Cart</button>
-            </div>    
-        </nav>
+        <div className="dashboardContainer">
+            <p className="siteTitle">Shop-It</p>
+            <nav className="navBar">
+                <div>
+                    <button onClick={()=>{navigate("/")}}>Home</button>
+                </div>
+                <div>
+                    <button onClick={()=>{navigate("/catalog")}}>Catalog</button>
+                </div>
+                <div>
+                    <button onClick={()=>{navigate("/checkout")}}>Cart</button>
+                </div>    
+            </nav>
+
+        </div>
+        
         <Outlet context={{productArray,error,loading,addToCart}}/>
 
 
