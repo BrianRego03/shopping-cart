@@ -32,7 +32,7 @@ const Catalog = ()=>{
                 })}
             </div>
             
-            <p>Catalog Page</p>
+            
         </>
     )
 }
