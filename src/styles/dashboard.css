@@ -5,6 +5,8 @@
     flex-wrap: wrap;
     /* background-color: rgb(0, 194, 0); */
     background-color: #8FBC8F;
+    position: sticky;
+    top:0;
 }
 .siteTitle{
     margin: 0px;
