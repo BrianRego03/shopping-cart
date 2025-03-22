@@ -69,4 +69,9 @@ button:focus-visible {
 
 body{
   margin:0;
+
+}
+html {
+  overflow-x: hidden;
+  margin-right: calc(-1 * (100vw - 100%));
 }
