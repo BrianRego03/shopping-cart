@@ -43,7 +43,7 @@
 }
 
 .highlightCard{
-    border:2px solid rgb(19, 148, 2);
+    border:2px solid #729672;
 }
 
 .buttonDivision{
@@ -56,7 +56,7 @@
     justify-content: space-between;
     align-items: center;
     border-radius: 20px;
-    background-color: rgb(19, 148, 2);
+    background-color:  #587258;
     color: white;
 }
 
@@ -67,7 +67,7 @@
     width: 30%;
     padding: 0px;
     border-radius: 20px;
-    background-color: rgb(19, 148, 2);
+    background-color:  #587258;
     color: white;
     font-size: 1.5rem;
     cursor: pointer;
@@ -76,7 +76,7 @@
 }
 
 .addCartButton:hover{
-    background-color:rgb(19, 148, 2);
+    background-color: #587258;
     color: white;
     cursor: pointer;
 
@@ -85,7 +85,7 @@
 
 .addCartButton{
     background-color: white;
-    border: 1px solid rgb(19, 148, 2);
+    border: 1px solid #587258;
     height: 30px;
     width: 100%;
     font-size: 1.2rem;
