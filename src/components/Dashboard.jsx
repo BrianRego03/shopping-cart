@@ -62,6 +62,8 @@ const Dashboard = ()=>{
         setProductArray(cartSelectionArray);
     }
 
+    const cartCount= productArray.reduce((total,items)=>total+items.quantity,0);
+
 
     return (
         <>
@@ -75,7 +77,7 @@ const Dashboard = ()=>{
                     <button onClick={()=>{navigate("/catalog")}}>Catalog</button>
                 </div>
                 <div>
-                    <button onClick={()=>{navigate("/checkout")}}>Cart</button>
+                    <button onClick={()=>{navigate("/checkout")}}>Cart {cartCount>0?cartCount:null}</button>
                 </div>    
             </nav>
 
