@@ -50,7 +50,7 @@
     height: 30px;
     border: none;  
     width:70%;  
-    font-size: 1.2rem;
+    font-size: 22px;
     font-weight: bold;
     display: flex;
     justify-content: space-between;
@@ -59,7 +59,9 @@
     background-color:  #587258;
     color: white;
 }
-
+.buttonDivision span{
+    font-size: 22px;
+}
 .quantityButton{
 
     border: none;
@@ -69,7 +71,7 @@
     border-radius: 20px;
     background-color:  #587258;
     color: white;
-    font-size: 1.5rem;
+    font-size: 22px;
     cursor: pointer;
 
 
@@ -88,7 +90,7 @@
     border: 1px solid #587258;
     height: 30px;
     width: 100%;
-    font-size: 1.2rem;
+    font-size: 22px;
     border-radius: 20px;
 
 }

@@ -15,6 +15,8 @@
     padding: 5px;
     padding-right: 20px;
     border-radius: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .checkoutSection{
@@ -31,11 +33,11 @@
 }
 
 .quantityChange button,span{
-    font-size: 1.2rem;
+    font-size: 22px;
 }
 
 .buttonSection button{
-    font-size: 1.2rem;
+    font-size: 22px;
     min-width:20%;
     background-color: white;
     padding: 5px;
